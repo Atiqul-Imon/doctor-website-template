@@ -14,24 +14,19 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="section-medical bg-medical-gradient">
-        <div className="container-custom">
+      <section className="section-medical bg-medical-gradient relative overflow-hidden">
+        {/* Background overlay for better contrast */}
+        <div className="absolute inset-0 bg-black/20"></div>
+        
+        <div className="container-custom relative z-10">
           <div className="text-center space-y-6 text-white">
-            <h1 className="text-4xl md:text-5xl font-bold">
+            <h1 className="text-4xl md:text-5xl font-bold drop-shadow-lg">
               Medical{' '}
-              <span className="text-yellow-300">Blog & Articles</span>
+              <span className="text-yellow-300 drop-shadow-lg">Blog & Articles</span>
             </h1>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed drop-shadow-md">
               Stay informed with the latest medical insights, health tips, and preventive care information from Dr. Sarah Johnson.
             </p>
-            <div className="flex justify-center">
-              <Link
-                href="/admin"
-                className="btn-medical-secondary"
-              >
-                Manage Blog Posts
-              </Link>
-            </div>
           </div>
         </div>
       </section>

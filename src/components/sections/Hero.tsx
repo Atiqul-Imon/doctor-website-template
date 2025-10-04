@@ -86,10 +86,8 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              <Link href="/appointment" className="btn-medical-primary group text-sm md:text-base px-4 py-2 md:px-6 md:py-3">
-                <Calendar className="h-4 w-4 md:h-5 md:w-5 mr-2" />
+              <Link href="/appointment" className="btn-medical-primary text-sm md:text-base px-4 py-2 md:px-6 md:py-3">
                 Book Appointment
-                <ArrowRight className="h-4 w-4 md:h-5 md:w-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
 
