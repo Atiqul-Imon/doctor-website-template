@@ -40,12 +40,23 @@ export interface OfficeHours {
 export interface Service {
   id: string
   title: string
+  slug: string
   description: string
+  detailedDescription?: string
   icon: string
   price?: string
   duration?: string
+  appointmentType?: string
   features: string[]
+  process?: ProcessStep[]
+  benefits?: string[]
   image?: string
+  tags?: string[]
+}
+
+export interface ProcessStep {
+  title: string
+  description: string
 }
 
 export interface Testimonial {

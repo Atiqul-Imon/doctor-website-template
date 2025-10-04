@@ -16,7 +16,8 @@ import {
   Phone,
   Calendar
 } from 'lucide-react'
-import { services } from '@/data'
+import { getServices } from '@/lib/services'
+import Link from 'next/link'
 
 const iconMap = {
   Stethoscope,
@@ -32,6 +33,8 @@ const iconMap = {
 }
 
 export function Services() {
+  const services = getServices()
+  
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 }
@@ -47,9 +50,9 @@ export function Services() {
 
   const cardVariants = {
     initial: { opacity: 0, y: 40, scale: 0.95 },
-    animate: { 
-      opacity: 1, 
-      y: 0, 
+    animate: {
+      opacity: 1,
+      y: 0,
       scale: 1,
       transition: { duration: 0.6 }
     }
@@ -106,42 +109,52 @@ export function Services() {
                 variants={cardVariants}
                 className="group"
               >
-                <div className="service-card h-full relative overflow-hidden">
-                  {/* Service Icon */}
-                  <div className="flex justify-center mb-6">
-                    <div className="medical-icon group-hover:scale-110 transition-transform duration-300">
-                      <IconComponent className="h-7 w-7" />
+                <Link href={`/services/${service.slug}`} className="block">
+                  <div className="service-card h-full relative overflow-hidden cursor-pointer">
+                    {/* Service Icon */}
+                    <div className="flex justify-center mb-6">
+                      <div className="medical-icon group-hover:scale-110 transition-transform duration-300">
+                        <IconComponent className="h-7 w-7" />
+                      </div>
                     </div>
-                  </div>
 
-                  {/* Service Content */}
-                  <div className="text-center space-y-4">
-                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-teal-600 transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {service.description}
-                    </p>
+                    {/* Service Content */}
+                    <div className="text-center space-y-4">
+                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-teal-600 transition-colors">
+                        {service.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        {service.description}
+                      </p>
 
-                    {/* Features List */}
-                    <div className="space-y-2 pt-4">
-                      {service.features.slice(0, 3).map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center justify-center space-x-2 text-sm text-gray-600">
-                          <Check className="h-4 w-4 text-green-500 flex-shrink-0" />
-                          <span>{feature}</span>
-                        </div>
-                      ))}
-                      {service.features.length > 3 && (
-                        <div className="text-sm text-teal-600 font-medium">
-                          +{service.features.length - 3} more features
-                        </div>
-                      )}
+                      {/* Features List */}
+                      <div className="space-y-2 pt-4">
+                        {service.features.slice(0, 3).map((feature, featureIndex) => (
+                          <div key={featureIndex} className="flex items-center justify-center space-x-2 text-sm text-gray-600">
+                            <Check className="h-4 w-4 text-green-500 flex-shrink-0" />
+                            <span>{feature}</span>
+                          </div>
+                        ))}
+                        {service.features.length > 3 && (
+                          <div className="text-sm text-teal-600 font-medium">
+                            +{service.features.length - 3} more features
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Learn More Link */}
+                      <div className="pt-4">
+                        <span className="inline-flex items-center text-teal-600 font-medium group-hover:text-teal-700 transition-colors">
+                          Learn More 
+                          <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                        </span>
+                      </div>
                     </div>
-                  </div>
 
-                  {/* Hover Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
+                    {/* Hover Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                </Link>
               </motion.div>
             )
           })}

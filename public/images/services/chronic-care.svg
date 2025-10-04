@@ -1,19 +1,12 @@
-<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient id="bg-#dc2626" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" style="stop-color:#dc262620;stop-opacity:1" />
-        <stop offset="100%" style="stop-color:#dc262610;stop-opacity:1" />
-      </linearGradient>
-    </defs>
-    <rect width="100%" height="100%" fill="url(#bg-#dc2626)"/>
-    <circle cx="50%" cy="40%" r="60" fill="#dc2626" opacity="0.1"/>
-    <g transform="translate(50%, 50%)">
-      <g transform="translate(-30, -30)">
-        <rect x="20" y="20" width="20" height="20" rx="3" fill="#dc2626" opacity="0.3"/>
-        <circle cx="30" cy="15" r="8" fill="#dc2626" opacity="0.4"/>
-        <rect x="15" y="25" width="30" height="4" rx="2" fill="#dc2626" opacity="0.3"/>
-        <rect x="15" y="32" width="25" height="4" rx="2" fill="#dc2626" opacity="0.3"/>
-      </g>
-    </g>
-    <text x="50%" y="85%" font-family="Arial, sans-serif" font-size="14" fill="#dc2626" text-anchor="middle" dy=".3em">Chronic Care</text>
-  </svg>
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#FEF2F2"/>
+  <path d="M100 120 C100 80, 140 80, 180 120 C220 80, 260 80, 300 120 C300 160, 260 200, 220 160 C180 200, 140 200, 100 160 Z" fill="#EF4444" opacity="0.2"/>
+  <path d="M100 120 C100 80, 140 80, 180 120 C220 80, 260 80, 300 120 C300 160, 260 200, 220 160 C180 200, 140 200, 100 160 Z" stroke="#EF4444" stroke-width="4" fill="none"/>
+  <circle cx="150" cy="140" r="8" fill="#EF4444"/>
+  <circle cx="250" cy="140" r="8" fill="#EF4444"/>
+  <rect x="180" y="130" width="40" height="20" rx="10" fill="#EF4444"/>
+  <circle cx="200" cy="140" r="6" fill="white"/>
+  <path d="M195 140 L200 145 L205 135" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <rect x="120" y="180" width="160" height="8" rx="4" fill="#EF4444"/>
+  <rect x="140" y="200" width="120" height="6" rx="3" fill="#EF4444" opacity="0.7"/>
+</svg>
