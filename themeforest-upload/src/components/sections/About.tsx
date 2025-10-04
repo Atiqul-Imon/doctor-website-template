@@ -76,27 +76,27 @@ export function About() {
           variants={staggerContainer}
           initial="initial"
           animate="animate"
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-16"
         >
-          <motion.div variants={fadeInUp} className="space-y-4 md:space-y-6">
-            <div className="inline-flex items-center space-x-2 bg-teal-100 text-teal-700 px-3 py-2 md:px-4 rounded-full text-xs md:text-sm font-medium">
-              <Award className="h-3 w-3 md:h-4 md:w-4" />
+          <motion.div variants={fadeInUp} className="space-y-6">
+            <div className="inline-flex items-center space-x-2 bg-teal-100 text-teal-700 px-4 py-2 rounded-full text-sm font-medium">
+              <Award className="h-4 w-4" />
               <span>About Dr. Sarah Johnson</span>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 px-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
               Meet Your{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600">
                 Trusted Physician
               </span>
             </h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Dr. Sarah Johnson brings {doctorData.experience}+ years of medical expertise and compassionate care 
               to every patient interaction, ensuring you receive the highest quality healthcare.
             </p>
           </motion.div>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Left Content - Doctor Image */}
           <motion.div
             className="relative"

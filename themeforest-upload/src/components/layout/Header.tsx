@@ -38,20 +38,20 @@ export function Header() {
       <div className="bg-primary-600 text-white py-2">
         <div className="container-custom">
           <div className="flex items-center justify-between text-sm">
-            <div className="flex items-center space-x-3 md:space-x-6">
+            <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-2">
-                <Phone className="h-3 w-3 md:h-4 md:w-4" />
-                <span className="text-xs md:text-sm">{doctorData.phone}</span>
+                <Phone className="h-4 w-4" />
+                <span>{doctorData.phone}</span>
               </div>
-              <div className="hidden sm:flex items-center space-x-2">
-                <Mail className="h-3 w-3 md:h-4 md:w-4" />
-                <span className="text-xs md:text-sm">{doctorData.email}</span>
+              <div className="flex items-center space-x-2">
+                <Mail className="h-4 w-4" />
+                <span>{doctorData.email}</span>
               </div>
             </div>
-            <div className="hidden lg:flex items-center space-x-4">
-              <span className="text-xs md:text-sm">Emergency: (555) 911-MED</span>
+            <div className="hidden md:flex items-center space-x-4">
+              <span>Emergency: (555) 911-MED</span>
               <span>•</span>
-              <span className="text-xs md:text-sm">Mon-Fri: 8AM-5PM</span>
+              <span>Mon-Fri: 8AM-5PM</span>
             </div>
           </div>
         </div>
@@ -60,18 +60,18 @@ export function Header() {
       {/* Main Navigation */}
       <nav className="bg-white border-b border-gray-100">
         <div className="container-custom">
-          <div className="flex items-center justify-between h-16 md:h-20">
+          <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <div className="flex items-center">
-              <Link href="/" className="flex items-center space-x-2 md:space-x-3">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-primary-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg md:text-xl">SJ</span>
+              <Link href="/" className="flex items-center space-x-3">
+                <div className="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">SJ</span>
                 </div>
-                <div className="hidden sm:block">
-                  <h1 className="text-lg md:text-xl font-bold text-gray-900">
+                <div>
+                  <h1 className="text-xl font-bold text-gray-900">
                     Dr. Sarah Johnson
                   </h1>
-                  <p className="text-xs md:text-sm text-gray-600">Internal Medicine</p>
+                  <p className="text-sm text-gray-600">Internal Medicine</p>
                 </div>
               </Link>
             </div>
@@ -89,7 +89,7 @@ export function Header() {
               ))}
               <Link
                 href="/appointment"
-                className="btn-primary text-sm px-4 py-2"
+                className="btn-primary"
               >
                 Book Appointment
               </Link>
@@ -99,7 +99,7 @@ export function Header() {
             <div className="lg:hidden">
               <button
                 type="button"
-                className="text-gray-700 hover:text-primary-600 transition-colors duration-200 p-2"
+                className="text-gray-700 hover:text-primary-600 transition-colors duration-200"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
                 <span className="sr-only">Open main menu</span>

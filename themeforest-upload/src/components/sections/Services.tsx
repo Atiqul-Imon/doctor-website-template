@@ -67,23 +67,23 @@ export function Services() {
 
       <div className="container-custom relative z-10">
         <motion.div
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-16"
           variants={staggerContainer}
           initial="initial"
           animate="animate"
         >
-          <motion.div variants={fadeInUp} className="space-y-4 md:space-y-6">
-            <div className="inline-flex items-center space-x-2 bg-teal-100 text-teal-700 px-3 py-2 md:px-4 rounded-full text-xs md:text-sm font-medium">
-              <Heart className="h-3 w-3 md:h-4 md:w-4" />
+          <motion.div variants={fadeInUp} className="space-y-6">
+            <div className="inline-flex items-center space-x-2 bg-teal-100 text-teal-700 px-4 py-2 rounded-full text-sm font-medium">
+              <Heart className="h-4 w-4" />
               <span>Our Medical Services</span>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 px-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
               Comprehensive Healthcare{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600">
                 Solutions
               </span>
             </h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               We provide a full range of medical services designed to meet your health needs at every stage of life, 
               from preventive care to specialized treatments.
             </p>
@@ -92,7 +92,7 @@ export function Services() {
 
         {/* Services Grid */}
         <motion.div
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={staggerContainer}
           initial="initial"
           animate="animate"

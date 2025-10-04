@@ -42,54 +42,54 @@ export function Hero() {
       </div>
 
       <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center py-12 md:py-16 lg:py-20">
+        <div className="grid lg:grid-cols-2 gap-16 items-center py-20">
           {/* Left Content */}
           <motion.div
-            className="space-y-6 md:space-y-8 lg:space-y-10 text-white text-center lg:text-left"
+            className="space-y-10 text-white"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
             {/* Status Badge */}
             <motion.div
-              className="inline-flex items-center space-x-2 bg-white/15 backdrop-blur-md rounded-full px-3 py-2 md:px-4 border border-white/20"
+              className="inline-flex items-center space-x-2 bg-white/15 backdrop-blur-md rounded-full px-4 py-2 border border-white/20"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-              <span className="text-xs md:text-sm font-medium">Accepting New Patients</span>
+              <span className="text-sm font-medium">Accepting New Patients</span>
             </motion.div>
 
             {/* Main Heading */}
             <motion.div
-              className="space-y-4 md:space-y-6"
+              className="space-y-6"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white drop-shadow-lg">
+              <h1 className="text-5xl lg:text-6xl font-bold leading-tight text-white drop-shadow-lg">
                 Compassionate Care,{' '}
                 <span className="text-yellow-300 drop-shadow-lg">
                   Exceptional Health
                 </span>
               </h1>
-              <p className="text-base md:text-lg text-white leading-relaxed max-w-xl mx-auto lg:mx-0 drop-shadow-md">
+              <p className="text-lg text-white leading-relaxed max-w-xl drop-shadow-md">
                 Board-certified internal medicine physician with {doctorData.experience}+ years of experience in comprehensive medical care.
               </p>
             </motion.div>
 
             {/* CTA Button */}
             <motion.div
-              className="flex justify-center lg:justify-start"
+              className="flex justify-center"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              <Link href="/appointment" className="btn-medical-primary group text-sm md:text-base px-4 py-2 md:px-6 md:py-3">
-                <Calendar className="h-4 w-4 md:h-5 md:w-5 mr-2" />
+              <Link href="/appointment" className="btn-medical-primary group">
+                <Calendar className="h-5 w-5 mr-2" />
                 Book Appointment
-                <ArrowRight className="h-4 w-4 md:h-5 md:w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
 

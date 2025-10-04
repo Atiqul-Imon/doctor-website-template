@@ -135,7 +135,7 @@ export function ContactForm({ className }: ContactFormProps) {
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
-      className={cn('space-y-4 md:space-y-6', className)}
+      className={cn('space-y-6', className)}
     >
       {/* Hidden field for Netlify Forms */}
       <input type="hidden" name="form-name" value="contact" />
@@ -157,7 +157,7 @@ export function ContactForm({ className }: ContactFormProps) {
           value={formData.name}
           onChange={handleInputChange}
           required
-          className="w-full px-3 py-2 md:px-4 md:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 text-base"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200"
           placeholder="Enter your full name"
         />
       </div>
